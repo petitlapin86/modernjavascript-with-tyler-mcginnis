@@ -53,3 +53,21 @@ function objectifyDry (key, value) {
 }
 
 objectifyDry('name', 'Paige')
+
+/*
+Template Literal or template strings
+
+these are good for multi line strings this help to conconcatonate more efficiently
+than escape charaters and quotes
+
+say we had this code below:
+*/
+function makeGreeting (name, email, id) {
+  return 'Hello, ' + name +
+    '. We\'ve emailed you at ' + email +
+    '. Your user id is "' + id + '".'
+}
+ //see how much cleaner template literals achieve the same thing?
+ function makeGreetingDry (name, email, id) {
+   return `Hello, ${name}. We've emailed you at ${email}. Your user id is "${id}".`
+ }
