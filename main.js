@@ -71,3 +71,34 @@ function makeGreeting (name, email, id) {
  function makeGreetingDry (name, email, id) {
    return `Hello, ${name}. We've emailed you at ${email}. Your user id is "${id}".`
  }
+
+ /*
+ Arrow Functions
+
+ Arrow functions are helpful because they are DRYer
+ and they can be helpful when working with the this keyword
+*/
+
+// fn declaration
+function add (x,y) {
+  return x + y;
+}
+
+// fn expression
+var add = function (x,y) {
+  return x + y;
+}
+
+//if we wanted to create the same thing with arrow functions:
+var add = function (x,y) {
+  return x + y;
+}
+
+var add = (x,y) => {
+  return x + y;
+}
+
+/*
+Default parameters
+default values for arguments incase none are provided when it is envoked
+*/
