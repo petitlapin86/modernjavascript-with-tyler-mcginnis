@@ -28,3 +28,28 @@ function formatMessageDry(name, id, avatar) {
     }
   }
 }
+
+/*
+Computed Property Names
+
+Allows you to have a piece of code that results in a single value
+with Computed Property Names, you can use object literal notation
+to assign the expression as a property on the object without having
+to create it first.
+*/
+function objectify (key, value) {
+  let obj = {}
+  obj[key] = value
+  return obj
+}
+
+objectify('name', 'Tyler') // { name: 'Tyler' }
+
+//So the code above can now be rewritten like this.
+function objectifyDry (key, value) {
+  return {
+    [key] : value
+  }
+}
+
+objectifyDry('name', 'Paige')
