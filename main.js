@@ -100,5 +100,10 @@ var add = (x,y) => {
 
 /*
 Default parameters
-default values for arguments incase none are provided when it is envoked
+default values for arguments incase none are provided when it is envoked,
+ES6 Has a much cleaner way of doing this - because I learned this way I am just going to
+show the appropriate way:
 */
+function calculatePayment (price, salesTax = 0.05, discount = 0) { //entering default values 
+  // math function would go here
+}
