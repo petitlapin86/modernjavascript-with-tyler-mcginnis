@@ -104,6 +104,25 @@ default values for arguments incase none are provided when it is envoked,
 ES6 Has a much cleaner way of doing this - because I learned this way I am just going to
 show the appropriate way:
 */
-function calculatePayment (price, salesTax = 0.05, discount = 0) { //entering default values 
+function calculatePayment (price, salesTax = 0.05, discount = 0) { //entering default values
   // math function would go here
 }
+
+
+/*
+Classes
+
+If you’ve used arrow functions before, you know that they don’t have their own this keyword. Instead, the this keyword is bound lexically. That’s a fancy way of saying when you use the this keyword inside of an arrow function, things behave how you’d expect them to. Taking that knowledge and combining it with the “Class Fields” proposal, what if we swapped out the handleChange method for an arrow function? Seems a little weird but by doing this we’d get rid of the .bind issue altogether since, again, arrow functions bind this lexically.
+*/
+class Animal {
+  eat() {}
+  sleep = () => {}
+}
+
+// Is equivalent to
+
+function Animal () {
+  this.sleep = function () {}
+}
+
+Animal.prototype.eat = function () {}
